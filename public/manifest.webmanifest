@@ -1,0 +1,15 @@
+{
+  "name": "아람출퇴근",
+  "short_name": "아람출퇴근",
+  "description": "새안의원·주안역환승정류장 실시간 버스 정보",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f9fd",
+  "theme_color": "#f7f9fd",
+  "lang": "ko-KR",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
