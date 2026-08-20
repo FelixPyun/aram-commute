@@ -81,13 +81,11 @@ function StopView({ type, stopName, stopNo, buses }) {
   const destination = morning ? '새안의원' : '주안역환승';
   return (
     <section className={`stop-panel ${morning ? 'morning-panel' : 'evening-panel'}`}>
-      <div className="stop-heading">
+      <div className="stop-heading simple-stop-heading">
         <div>
-          <div className="stop-kicker">{morning ? '🌅 출근' : '🌙 퇴근'}</div>
           <h2>{stopName}</h2>
           <p>정류장 번호 {stopNo}</p>
         </div>
-        <span className="live-chip">실시간</span>
       </div>
       <div className="bus-stack">
         {buses.map(bus => <BusCard key={bus.route} bus={bus} destination={destination} />)}

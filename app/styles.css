@@ -93,3 +93,16 @@
   .topbar .icon-btn{width:34px;height:34px;border-radius:11px;font-size:20px;right:2px;top:1px}
   .stop-heading{margin-bottom:4px}
 }
+
+
+/* v0.22: tab-only commute labels + minimal stop header */
+.simple-stop-heading{justify-content:flex-start}
+.simple-stop-heading h2{margin:0 0 3px;font-size:18px;font-weight:950;letter-spacing:-.45px}
+.simple-stop-heading p{margin:0}
+
+@media (max-width:600px){
+  .stop-panel{padding-top:9px}
+  .simple-stop-heading{margin-bottom:6px;padding:0 3px}
+  .simple-stop-heading h2{margin:0 0 1px;font-size:15px;line-height:1.2}
+  .simple-stop-heading p{font-size:10.5px;line-height:1.25}
+}
