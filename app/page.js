@@ -113,7 +113,7 @@ export default function Home() {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch(`/api/arrivals?t=${Date.now()}`, { cache: 'no-store' });
+      const res = await fetch('/api/arrivals', { cache: 'no-store' });
       const json = await res.json();
       setMeta(json);
       if (!res.ok || !json.ok) throw new Error(json.error || json?.diagnostics?.routeErrors?.[0] || `실시간 조회 실패 (HTTP ${res.status})`);
@@ -130,7 +130,7 @@ export default function Home() {
 
   useEffect(() => {
     refresh();
-    const id = setInterval(refresh, 15000);
+    const id = setInterval(refresh, 20000);
 
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js').catch(() => {});
@@ -149,7 +149,7 @@ export default function Home() {
             {loading && !updatedAt
               ? '실시간 정보 연결 중...'
               : live
-                ? `15초 자동 갱신 · ${updatedAt?.toLocaleTimeString('ko-KR', { hour12: false })}`
+                ? `20초 자동 갱신 · ${updatedAt?.toLocaleTimeString('ko-KR', { hour12: false })}`
                 : '연결 실패'}
           </div>
         </div>
