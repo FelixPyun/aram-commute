@@ -116,7 +116,7 @@ export default function Home() {
       const res = await fetch(`/api/arrivals?t=${Date.now()}`, { cache: 'no-store' });
       const json = await res.json();
       setMeta(json);
-      if (!res.ok || !json.ok) throw new Error(json.error || `실시간 조회 실패 (HTTP ${res.status})`);
+      if (!res.ok || !json.ok) throw new Error(json.error || json?.diagnostics?.routeErrors?.[0] || `실시간 조회 실패 (HTTP ${res.status})`);
       setData({ commute: json.commute, returnHome: json.returnHome });
       setLive(true);
       setUpdatedAt(json.fetchedAt ? new Date(json.fetchedAt) : new Date());

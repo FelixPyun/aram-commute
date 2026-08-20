@@ -1,15 +1,20 @@
-# 아람출퇴근 v0.17
+# 아람출퇴근 v0.18
 
-- v0.16 실시간 버스 조회/PWA 기능 유지
-- 600px 이하 모바일에서만 컴팩트 UI 적용
-- 상단 제목/탭/카드/여백 축소
-- 핵심 도착시간은 강조를 유지하면서 한 단계 축소
-- 현재 정류장/다음 버스 위치는 읽기 쉬운 크기로 유지
-- PC/태블릿 레이아웃은 기존 크기 유지
-- PWA 캐시 버전을 v0.17로 갱신
+## 변경사항
+- v0.17 모바일 컴팩트 UI 유지
+- Vercel 환경에서 공공데이터 인증키 전달 방식 보강
+- `ServiceKey`/`serviceKey`, Encoding/Decoding 인증키 조합 자동 대응
+- 인천 BIS 요청 8초 타임아웃 및 재시도 처리
+- 전체 조회 실패 시 실제 노선/API 오류를 화면에 표시
+- API/PWA 캐시 갱신(v0.18)
 
-## 실행
+## 배포
+현재 Git 연결 기준 폴더에 `app`, `public`, `package.json`, `README.md`를 덮어쓴 뒤:
+
 ```powershell
-npm.cmd install
-npm.cmd run dev
+git add .
+git commit -m "v0.18 production api fix"
+git push
 ```
+
+`.env.local`은 덮어쓰거나 Git에 올리지 않습니다. Vercel의 `DATA_GO_KR_SERVICE_KEY` 환경변수를 사용합니다.
