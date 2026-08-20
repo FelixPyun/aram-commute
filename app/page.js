@@ -176,7 +176,6 @@ export default function Home() {
       <div className={`live-note ${live ? 'ok' : 'bad'}`}>
         {live ? `● 실시간 연결 · 인천 BIS · ${meta?.elapsedMs ?? '-'}ms` : '● 인천 BIS 연결 안 됨'}
       </div>
-      <p className="data-note">첫 번째 버스는 공식 도착예정정보를, 다음 버스는 실제 차량 위치정보를 표시합니다.</p>
     </main>
   );
 }

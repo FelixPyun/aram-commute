@@ -86,3 +86,10 @@
   .next-facts{margin-top:4px}
   .data-note{margin-bottom:0}
 }
+
+
+/* v0.21: final mobile polish */
+@media (max-width:600px){
+  .topbar .icon-btn{width:34px;height:34px;border-radius:11px;font-size:20px;right:2px;top:1px}
+  .stop-heading{margin-bottom:4px}
+}
