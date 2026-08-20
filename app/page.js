@@ -69,7 +69,6 @@ function BusCard({ bus, destination }) {
     <article className="bus-card-v13">
       <div className="route-head">
         <div className={`route-badge ${routeClass[bus.route]}`}>{bus.route}</div>
-        {bus.routeError ? <span className="route-status error">조회 오류</span> : <span className="route-status">실시간</span>}
       </div>
       <FirstBus bus={bus} destination={destination} />
       <NextBus bus={bus} destination={destination} />
@@ -142,7 +141,7 @@ export default function Home() {
   return (
     <main className="page-shell v13-shell">
       <header className="topbar v13-topbar">
-        <div>
+        <div className="brand-center">
           <h1>🚌 아람출퇴근</h1>
           <div className="update-line">
             <span className={live ? 'dot live' : loading ? 'dot loading' : 'dot error'} />
@@ -174,7 +173,6 @@ export default function Home() {
         <StopView type="returnHome" stopName="주안역환승정류장" stopNo="37503" buses={data.returnHome} />
       )}
 
-      <button className="refresh-btn" onClick={refresh} disabled={loading}>↻ {loading ? '업데이트 중...' : '새로고침'}</button>
       <div className={`live-note ${live ? 'ok' : 'bad'}`}>
         {live ? `● 실시간 연결 · 인천 BIS · ${meta?.elapsedMs ?? '-'}ms` : '● 인천 BIS 연결 안 됨'}
       </div>

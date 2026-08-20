@@ -61,3 +61,28 @@
   .next-facts{grid-template-columns:minmax(0,1fr) 82px}
   .fact-item strong,.next-stop strong,.next-count strong{font-size:12px}
 }
+
+
+/* v0.20: centered brand, less repetition, tighter mobile cards */
+.topbar{position:relative;justify-content:center;min-height:64px}
+.brand-center{text-align:center;display:grid;justify-items:center}
+.brand-center .update-line{justify-content:center}
+.topbar .icon-btn{position:absolute;right:2px;top:3px}
+.route-head{justify-content:flex-start}
+.route-status{display:none}
+
+@media (max-width:600px){
+  .topbar{min-height:56px;padding:0 2px 8px}
+  .brand-center h1{font-size:22px}
+  .topbar .icon-btn{right:1px;top:0}
+
+  .stop-panel{padding:10px}
+  .stop-heading{margin-bottom:7px}
+  .bus-stack{gap:7px}
+  .route-head{padding:7px 8px 5px}
+  .first-bus-block{margin:0 7px 6px;padding:7px 8px}
+  .next-bus-block{margin:0 7px 8px;padding:8px}
+  .fact-grid{margin-top:5px}
+  .next-facts{margin-top:4px}
+  .data-note{margin-bottom:0}
+}
