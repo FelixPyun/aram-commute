@@ -1,4 +1,4 @@
-const CACHE = 'aram-commute-v022';
+const CACHE = 'aram-commute-v023';
 const STATIC = ['/', '/manifest.webmanifest', '/icons/icon-192.png', '/icons/icon-512.png', '/icons/apple-touch-icon.png'];
 
 self.addEventListener('install', (event) => {

@@ -106,3 +106,15 @@
   .simple-stop-heading h2{margin:0 0 1px;font-size:15px;line-height:1.2}
   .simple-stop-heading p{font-size:10.5px;line-height:1.25}
 }
+
+/* v0.23: 서울 구로09 출퇴근 연결 */
+.route-purple{background:#c026d3}
+.journey-stack{display:grid;gap:14px}
+.seoul-panel{background:linear-gradient(180deg,#f4f7fb 0%,#ffffff 100%)}
+.secondary-stop-panel{border-style:solid}
+.seoul-wait-note{margin-top:7px;text-align:center;color:#8a94a5;font-size:10px;line-height:1.35}
+@media(max-width:600px){
+  .journey-stack{gap:10px}
+  .seoul-panel{padding-top:9px}
+  .seoul-wait-note{font-size:9px;margin-top:6px}
+}

@@ -2,7 +2,7 @@ import './styles.css';
 
 export const metadata = {
   title: '아람출퇴근',
-  description: '인천 버스 실시간 도착정보 전용 페이지',
+  description: '인천·서울 출퇴근 실시간 버스 정보',
   manifest: '/manifest.webmanifest',
   applicationName: '아람출퇴근',
   appleWebApp: {
