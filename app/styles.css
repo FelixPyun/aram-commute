@@ -118,3 +118,19 @@
   .seoul-panel{padding-top:9px}
   .seoul-wait-note{font-size:9px;margin-top:6px}
 }
+
+
+/* v0.24: destination label readability + zero-stop wording */
+.fact-grid{grid-template-columns:minmax(0,1fr) minmax(108px,34%)}
+.next-facts{grid-template-columns:minmax(0,1fr) minmax(116px,36%)}
+.fact-item.align-right span,.next-count span{overflow-wrap:normal;word-break:keep-all;line-height:1.25}
+.fact-item.align-right strong,.next-count strong{word-break:keep-all}
+@media(max-width:390px){
+  .fact-grid{grid-template-columns:minmax(0,1fr) minmax(98px,35%)}
+  .next-facts{grid-template-columns:minmax(0,1fr) minmax(104px,37%)}
+  .fact-item.align-right span,.next-count span{font-size:9.5px}
+}
+@media(max-width:360px){
+  .fact-grid{grid-template-columns:minmax(0,1fr) minmax(92px,36%)}
+  .next-facts{grid-template-columns:minmax(0,1fr) minmax(98px,38%)}
+}
